@@ -54,13 +54,13 @@ Major services, Time Duration and Pricing:
     "S. No": 1,
     "service_name": "Artificial intelligence",
     "completion_time": "3 months",
-    "rate_charges": 500000
+    "rate_charges": 1500,000
   },
   {
     "S. No": 2,
     "service_name": "Web Development or website",
     "completion_time": "1 month",
-    "rate_charges": 80000
+    "rate_charges": 180,000
   },
   
   
@@ -68,7 +68,7 @@ Major services, Time Duration and Pricing:
     "S. No": 5,
     "service_name": "Mobile Application",
     "completion_time": "2 months",
-    "rate_charges": 250000
+    "rate_charges": 700,000
   },
   
   
@@ -104,13 +104,13 @@ Major services, Time Duration and Pricing:
     "S. No": 1,
     "service_name": "Artificial intelligence",
     "completion_time": "3 months",
-    "rate_charges": 500000
+    "rate_charges": 1500,000
   },
   {
     "S. No": 2,
     "service_name": "Web Development or website",
     "completion_time": "1 month",
-    "rate_charges": 80000
+    "rate_charges": 180,000
   },
   
   
@@ -118,7 +118,7 @@ Major services, Time Duration and Pricing:
     "S. No": 5,
     "service_name": "Mobile Application",
     "completion_time": "2 months",
-    "rate_charges": 250000
+    "rate_charges": 700,000
   },
   
   
@@ -155,13 +155,13 @@ Major services, Time Duration and Pricing:
     "S. No": 1,
     "service_name": "Artificial intelligence",
     "completion_time": "3 months",
-    "rate_charges": 500000
+    "rate_charges": 1500,000
   },
   {
     "S. No": 2,
     "service_name": "Web Development or website",
     "completion_time": "1 month",
-    "rate_charges": 80000
+    "rate_charges": 180,000
   },
   
   
@@ -169,7 +169,7 @@ Major services, Time Duration and Pricing:
     "S. No": 5,
     "service_name": "Mobile Application",
     "completion_time": "2 months",
-    "rate_charges": 250000
+    "rate_charges": 700,000
   },
   
   
@@ -283,10 +283,12 @@ with st.form("chat_form", clear_on_submit=True):
 if submitted and user_input:
     with st.spinner("Thinking..."):
         final_output, last_agent_name = asyncio.run(get_agent_reply(user_input))
-        st.session_state.chat.insert(0, ("🤖 Response", f"""{final_output } """))
-        st.session_state.chat.insert(0, ("🧑 You", user_input))
+        st.markdown(f"🤖 Response: {user_input}</div>", unsafe_allow_html=True)
+        st.markdown(f"🧑 You: {final_output}</div>", unsafe_allow_html=True)
 
+        
+        
 # Chat history
-for role, msg in st.session_state.chat:
-    color = "#293042" if role == "🧑 You" else "#162032"
-    st.markdown(f"<div class='chat-box' style='background:{color}'><b>{role}</b>: {msg}</div>", unsafe_allow_html=True)
+# for role, msg in st.session_state.chat:
+#     color = "#293042" if role == "🧑 You" else "#162032"
+#     st.markdown(f"<div class='chat-box' style='background:{color}'><b>{role}</b>: {msg}</div>", unsafe_allow_html=True)
