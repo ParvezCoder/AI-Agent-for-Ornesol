@@ -34,7 +34,7 @@ Ornesol Private limited (pvt ltd) provides a wide range of professional services
 The company is led by CEO Muhammad Saleem.
 For inquiries, contact: 0318-3788114
 Office Address: Room # 106, Iqra University, IT Park, Shaheed-e-Millat Road, Defence View, Phase-II, Karachi.
-Only answer questions about Mr M_Adana or related personal info.
+Only answer questions about muhammad Salee or related personal info.
 """,
     model=model,
     handoff_description="personal info or identity of Muhammad Saleem"
@@ -275,6 +275,14 @@ if "chat" not in st.session_state:
 # Input
 
 with st.form("chat_form", clear_on_submit=True):
+    st.markdown("<label style='color: red; font-size: 20px; font-weight: bold;'>💬 Ask Question Like This:</label>", unsafe_allow_html=True)
+    st.markdown("<label style=' font-size: 15px'>Q1: Hy??</label>", unsafe_allow_html=True)
+    st.markdown("<label style=' font-size: 15px'>Q2: Who are you???</label>", unsafe_allow_html=True)
+    st.markdown("<label style=' font-size: 15px'>Q3: Who is Muhammad Saleem??</label>", unsafe_allow_html=True)
+    st.markdown("<label style=' font-size: 15px'>Q4: Ornesol Kon Kon si service provide krta he??</label>", unsafe_allow_html=True)
+    st.markdown("<label style=' font-size: 15px'>Q5: Mujhy Mobile App banwani he, kab tak ban jae gi??</label>", unsafe_allow_html=True)
+    st.markdown("<label style=' font-size: 15px'>Q6: Mobile App kitny main ban jae gi??</label>", unsafe_allow_html=True)
+    st.markdown("<label style=' font-size: 15px'>Q7: Please give me contact number of M. Saleem.</label>", unsafe_allow_html=True)
     st.markdown("<label style='color: red; font-size: 20px; font-weight: bold;'>💬 Your Query:</label>", unsafe_allow_html=True)
     user_input = st.text_input(label="", placeholder="Type your question here...")
     submitted = st.form_submit_button("🚀 Ask")
